@@ -22,7 +22,7 @@ impl CPU {
         (hi << 8) | lo
     }
 
-    fn mem_write_u16(&self, addr: u16, data: u16) {
+    fn mem_write_u16(&mut self, addr: u16, data: u16) {
         let hi = (data >> 8) as u8;
         let lo = (data & 0xFF) as u8;
         self.mem_write(addr, lo);
