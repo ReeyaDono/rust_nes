@@ -17,7 +17,8 @@ impl CPU {
     }
 
     pub fn load_and_run(&mut self, program: Vec<u8>) {
-
+        self.load(program);
+        self.run();
     }
 
     pub fn load(&mut self, program: Vec<u8>) {
